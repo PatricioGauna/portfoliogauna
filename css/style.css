@@ -39,43 +39,52 @@ body {
   max-width: 900px;
   margin: auto; }
 
-nav {
-  background-color: #455A64;
-  color: #FFFFFF;
-  width: 100%;
-  font-family: "Roboto+mono", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  position: fixed;
-  z-index: 1;
-  box-shadow: 0px 3px 20px black; }
-  nav img {
-    height: 50px; }
-  nav ul {
-    float: right;
-    position: relative;
-    top: 3px; }
-  nav li {
-    display: inline-block;
-    margin: 0 5px;
-    padding: 0 8px;
-    padding-top: 15px;
-    box-sizing: border-box;
-    height: 47px; }
-  nav li:hover {
-    background: #3b4c55; }
-  nav a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-family: "Roboto+mono", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    box-sizing: border-box;
+/*nav{
+	background-color: $negro;
+	color: $texto-1;
+	width: 100%;
+	font-family: $texto;
+	font-size: 16px;
+	font-weight: 300;
+	position: fixed;
+	z-index: 1;
+	box-shadow: 0px 3px 0px $amarillo;
+	padding: 5px;
+	.logo{
+	font-family: $titulo;
+	font-size: 30px;
+	font-weight: 700;
+	}
+	ul{
+	float: right;
+	position: relative;
+    top: 3px;
+	}
+	li{
+	display: inline-block;
+	margin: 0 5px;
+	padding: 0 8px;
+	padding-top: 5px;
+	box-sizing: border-box;
+	height: 30px;
+	}
+	li:hover {
+	background: $amarillo;
+	}
+	a{
+	text-decoration: none;
+	color: $texto-1;
+	font-family: $texto;
+	font-size: 14px;
+	font-weight: 300;
+	box-sizing: border-box;
     height: 30px;
-    display: inline-block; }
-
+    display: inline-block;
+	}
+}
+*/
 h4 {
-  font-family: "Roboto+mono", sans-serif, sans-serif;
+  font-family: "Ubuntu", sans-serif, sans-serif;
   font-weight: 300; }
 
 header {
@@ -93,50 +102,57 @@ header {
     height: 596px;
     position: absolute; }
   header h1 {
-    font-family: "Eczar", serif, cursive;
+    font-family: "Kreon", sans-serif;
     font-size: 50px;
     margin-top: 100px;
     margin-bottom: 30px;
-    width: 30%;
+    width: 60%;
     line-height: 120%;
-    text-shadow: 2px 2px 4px #455A64; }
+    /*text-shadow: 2px 2px 0px black;*/
+    font-weight: 900; }
     @media (max-width: 720px) {
       header h1 {
         font-size: 40px;
         margin-left: 10px; } }
   header h1, header h3 {
-    color: white;
-    font-weight: 700;
+    color: #FFEB3B;
     text-transform: uppercase;
     position: relative;
     cursor: default; }
   header h3 {
-    background: #455A64;
-    font-family: "Roboto+mono", sans-serif, sans-serif;
+    background: #080808;
+    font-family: "Ubuntu", sans-serif, sans-serif;
     display: inline-block;
     padding: 5px 20px;
-    transform: rotate(-7deg); }
+    font-weight: 400;
+    margin-bottom: 60px; }
 
 .separador {
-  background: #455A64;
+  background: #FFEB3B;
   box-sizing: border-box;
   height: 3px;
-  width: 300px;
-  margin: auto; }
+  width: 300px; }
 
 .formacion {
-  background: #CFD8DC; }
+  background: #080808; }
   .formacion .contenedor {
     padding-top: 60px; }
   .formacion h2 {
-    color: #455A64;
-    padding: 10px;
-    text-align: center;
-    font-family: "Eczar", serif, cursive;
-    letter-spacing: 2px;
-    font-size: 40px;
+    color: white;
+    padding: 10px 10px 0 0;
+    font-family: "Kreon", sans-serif;
+    font-size: 30px;
     /*border: 1px $gris-oscuro solid;*/
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-weight: 700; }
+  .formacion p {
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 10px 30px 0 0;
+    width: 50%;
+    line-height: 150%; }
   .formacion article {
     width: 400px;
     display: inline-block;
@@ -145,38 +161,53 @@ header {
     padding: 100px 20px;
     padding-top: 80px;
     margin: auto;
-    color: #455A64; }
+    color: white; }
     @media (max-width: 720px) {
       .formacion article {
         width: 40%;
         margin: 0; } }
   .formacion h3 {
-    font-family: "Eczar", serif, sans-serif;
-    margin: 10px 0;
-    font-weight: 600; }
+    font-family: "Kreon", sans-serif;
+    color: #FFEB3B;
+    margin: 20px 0 0 0;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center; }
   .formacion h4 {
-    font-family: "Roboto+mono", sans-serif, sans-serif;
+    font-family: "Ubuntu", sans-serif;
     margin: 5px 0;
-    font-weight: 300; }
+    font-weight: 300;
+    text-align: center; }
+  .formacion .boton {
+    font-family: "Ubuntu", sans-serif;
+    color: #FFEB3B;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #FFEB3B;
+    margin: 15px 0;
+    text-decoration: none; }
 
 .habilidades {
-  background-image: url("../img/habilidades.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background: #FFEB3B;
+  	/*background-image: url("../img/habilidades.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;*/ }
   .habilidades .contenedor {
     padding-top: 60px; }
   .habilidades h3 {
-    background: white;
-    font-family: "Eczar", serif, cursive;
-    color: #455A64;
-    letter-spacing: 2px;
-    font-size: 40px;
-    text-align: center;
-    padding: 10px;
+    background: #FFEB3B;
+    font-family: "Kreon", sans-serif;
+    color: #080808;
+    font-size: 30px;
+    text-align: right;
+    padding: 10px 0;
     /*border: 1px $gris-oscuro solid;*/
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-weight: 700; }
+  .habilidades .separador {
+    margin: 0 0 auto 0; }
   .habilidades ul {
     width: 500px;
     margin: auto;
@@ -184,9 +215,9 @@ header {
     text-align: center;
     line-height: 125%; }
   .habilidades li {
-    background: white;
+    background: #FFEB3B;
     color: #CFD8DC;
-    font-family: "Roboto+mono", sans-serif, sans-serif;
+    font-family: "Ubuntu", sans-serif, sans-serif;
     font-weight: 700;
     display: inline-block;
     margin: 0 15px;
@@ -198,27 +229,25 @@ header {
         padding: 6px;
         font-size: 30px; } }
   .habilidades li:hover {
-    color: #455A64;
+    color: black;
     transform: rotate(7deg);
-    transform: scale(3); }
+    transform: scale(3);
+    border: 1px solid #080808; }
     @media (max-width: 720px) {
       .habilidades li:hover {
         transform: rotate(0);
         transform: scale(0); } }
 
 .trabajos {
-  background: #CFD8DC; }
+  background: #080808; }
   .trabajos .contenedor {
     padding-top: 60px; }
   .trabajos h3 {
-    color: #455A64;
-    letter-spacing: 2px;
-    padding: 10px;
-    text-align: center;
-    font-family: "Eczar", serif, sans-serif;
-    font-size: 40px;
-    margin-bottom: 10px;
-    font-weight: 600; }
+    color: white;
+    padding: 10px 0;
+    font-family: "Kreon", sans-serif;
+    font-size: 30px;
+    font-weight: 700; }
   .trabajos .galerias {
     display: flex;
     flex-direction: row;
@@ -228,8 +257,8 @@ header {
   .trabajos article {
     padding: 20px;
     text-align: center;
-    color: #455A64;
-    font-family: "Roboto+mono", sans-serif; }
+    color: white;
+    font-family: "Ubuntu", sans-serif; }
   .trabajos h4 {
     padding: 15px 0;
     font-weight: 700;
@@ -266,14 +295,14 @@ header {
     hyphens: auto; }
 
 footer {
-  background-color: #455A64; }
+  background-color: #FFEB3B; }
   footer .redes {
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
-    color: #FFFFFF;
+    color: #080808;
     width: 100%;
     font-family: "lato", sans-serif;
     font-size: 25px;
@@ -305,11 +334,11 @@ footer {
   footer p {
     display: inline-block;
     font-size: 17px;
-    font-family: "Roboto+mono", sans-serif, sans-serif; }
+    font-family: "Ubuntu", sans-serif, sans-serif; }
   footer .fondo {
-    background: black;
+    background: #080808;
     width: 100%;
-    font-family: "Roboto+mono", sans-serif, sans-serif;
+    font-family: "Ubuntu", sans-serif, sans-serif;
     font-size: 12px;
     text-align: center;
     padding: 20px 0;
