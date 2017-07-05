@@ -3,32 +3,64 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Patricio Gauna diseño</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/colorbox.css">
-	<link href="https://fonts.googleapis.com/css?family=Eczar:600,800|Roboto+Mono:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Eczar:600,800|Roboto+Mono:300,400,700,900|Ubuntu:300, 500|Kreon:700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="jquery/jquery.colorbox-min.js"></script>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 1100, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+    </script>
+    
+
 </head>
 
 <body>
 
-	<nav>
-		<div class="contenedor">
+	<nav class="navbar navbar-inverse">
+  		<div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    		<div class="navbar-header">
+      			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+       				 <span class="sr-only">Toggle navigation</span>
+        			 <span class="icon-bar"></span>
+       				 <span class="icon-bar"></span>
+       				 <span class="icon-bar"></span>
+      			</button>
+      		<a class="navbar-brand" href="index.html">gauna</a>
+    		</div>
 
-			<a href="index.html"><img src="img/logo-home.png"></a>
-
-			<ul>
-
-				<li><a href="#formacion">Formacion</a></li>
-				<li><a href="#habilidades">Habilidades</a></li>
-				<li><a href="#trabajos">Trabajos</a></li>
-				<li><a href="#contacto">Contacto</a></li>
-		
-			</ul>
-		</div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#1">Formación</a></li>
+	        <li><a href="#2">Habilidades</a></li>
+	        <li><a href="#3">Portfolio</a></li>
+	        <li><a href="#4">Contacto</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
 	</nav>
 
+	
 	<header>
 		<!--<img src="img/header.jpg">
 -->
@@ -40,40 +72,69 @@
 		</div>
 	
 	</header>
-<a name="formacion"></a>
-	<section class="formacion">
+
+
+	<section class="formacion" id="1">
 	
 		
 
 		<div class="contenedor">
-			<h2>Formación</h2>
-			<div class="separador"></div>
+
+ 		<h2>Formación</h2>
+		<div class="separador"></div>
+		<div class="row">
+  			<div class="col-sm-4 col-md-4">
+    		<div class="thumbnail">
+     		 	<img src="img/unla_circulo.png">
+      		<div class="caption">
+       		 	<h3>Lic. en Diseño y Comunicación Visual</h3>
+        		<p>Universidad Nacional de Lanús</p>
+        		<p><a href="http://www.unla.edu.ar" target= "_blank" class="btn btn-primary" role="button">Visitar web</a>
+      		</div>
+    		</div>
+			</div>
+
+			<div class="col-sm-4 col-md-4">
+    		<div class="thumbnail">
+     		 	<img src="img/coderhouse_circulo.png">
+      		<div class="caption">
+       		 	<h3>Diseñador Web</h3>
+        		<p>Coderhouse</p>
+        		<p><a href="https://www.coderhouse.com" target= "_blank" class="btn btn-primary" role="button">Visitar web</a>
+      		</div>
+    		</div>
+			</div>
+	</div>
+			<!--
+			
+			<p>Soy diseñador visual formado universitariamente, principalmente con prácticas en diseño editorial y de identidad. Actualmente me estoy orientando hacia el diseño web. </p>
 			<article>
 
-				<img src="img/unla.png">
+				<img src="img/unla_circulo.png">
 				<h3>Lic. en Diseño y Comunicación Visual</h3>
 				<h4>Universidad Nacional de Lanús</h4>
+				<a class="boton" href="http://www.unla.com.ar" target="_blank">Visitar sitio web</a>
 
 			</article>
 
 			<article>
 
-				<img src="img/coderhouse.png">
+				<img src="img/coderhouse_circulo.png">
 				<h3>Diseñador Web</h3>
 				<h4>Coderhouse</h4>
+				<a class="boton" href="http://www.coderhouse.com" target="_blank">Visitar sitio web</a>
 
 			</article>
-
+-->
 		</div>
 		
 	</section>
 
-	<section class="habilidades">
-		<a name="habilidades"></a>
+	<section class="habilidades" id="2">
 		<div class="contenedor">
 			
 			<h3>Habilidades</h3>
-			<div class="separador"></div>
+		
 			<ul>
 
 				<li>Photoshop</li>
@@ -84,15 +145,16 @@
 				<li>SASS</li>
 				<li>LESS</li>
 				<li>BOOTSTRAP</li>
+				<li>Inglés</li>
 				
 			</ul>
 			
 		</div>
 
-<a name="trabajos"></a>
 	</section>
 
-	<section class="trabajos">
+
+	<section class="trabajos" id="3">
 	
 		<div class="contenedor">
 
@@ -149,7 +211,7 @@
 
 	</section>
 
-	<footer>
+	<footer id="4">
 	<a name="contacto"></a>
 		<div class="contenedor">
 
@@ -169,15 +231,17 @@
 		<div class="fondo">Copyright @ Gauna Diseño 2017</div>
 
 	</footer>
+</div>
 
 
 		
 
-<script>
-      jQuery('a.gallery').colorbox();
+<script>jQuery('a.gallery').colorbox();</script>
 
-    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="jquery/bootstrap.min.js"></script>
 
 
+</div>
 </body>
 </html>

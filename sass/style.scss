@@ -1,5 +1,5 @@
 @import "reset";
-@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
 @import "variables";
 
 @mixin redondeado ($valor){
@@ -20,46 +20,51 @@ body{
 	margin: auto;
 }
 
-nav{
-	background-color: $gris-oscuro;
-	color: $texto-1;
-	width: 100%;
-	font-family: $texto;
-	font-size: 16px;
-	font-weight: 700;
-	position: fixed;
-	z-index: 1;
-	box-shadow: 0px 3px 20px black;
-	img{
-	height: 50px;
-	}
-	ul{
-	float: right;
-	position: relative;
-    top: 3px;
-	}
-	li{
-	display: inline-block;
-	margin: 0 5px;
-	padding: 0 8px;
-	padding-top: 15px;
-	box-sizing: border-box;
-	height: 47px;
-	}
-	li:hover {
-	background: darken($gris-oscuro, 5%);
-	}
-	a{
-	text-decoration: none;
-	color: $texto-1;
-	font-family: $texto;
-	font-size: 14px;
-	font-weight: 300;
-	box-sizing: border-box;
-    height: 30px;
-    display: inline-block;
-	}
+.container{
+	max-width: 900px;
 }
+
+.navbar{
+	background: black;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	color: white;
+	border-bottom: solid $amarillo 3px;
+	padding-left: 20px;
+	.navbar-brand{
+	font-family: $titulo;
+	font-weight: 800;
+	color: white;
+	font-size: 25px;
+	}
+	.navbar-brand:hover{
+	color: $amarillo;
+	}
+
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: $amarillo;
+    background-color: black;
+   	&:focus{
+    background: black;
+    }
+    &:hover{
+   	background-color: $amarillo;
+    }
+    }
+
+.nav>li:hover {
+		background: rgb(15,15,15);
+	}
+
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+    font-family: $texto;
+    }
+	
 
 h4{
 	font-family: $texto, sans-serif;
@@ -74,7 +79,6 @@ header{
     background-size: cover;
 	/*background-color: #A8B7AB;*/
 	padding: 60px 0;
-	padding-bottom: 200px;
 	text-align: left;
 	img{
 	width:100%;
@@ -86,54 +90,63 @@ header{
 			font-size: 40px;
 			margin-left: 10px;
 		}
-	font-family: $titulo, cursive;
-	font-size: 50px;
+	font-family: $texto2;
+	font-size: 100px;
 	margin-top: 100px;
 	margin-bottom: 30px;
-	width: 30%;
+	/*width: 60%;*/
 	line-height: 120%;
-	text-shadow: 2px 2px 4px $gris-oscuro;
+	/*text-shadow: 2px 2px 0px black;*/
+	font-weight: 700;
 	}
 	h1, h3{
-	color: white;
-	font-weight: 700;
+	color: $amarillo;
 	text-transform: uppercase;
 	position: relative;
 	cursor: default;
 	}
 	h3{
-	background: $gris-oscuro;
+	background: $negro;
 	font-family: $texto, sans-serif;
 	display: inline-block;
-	padding: 5px 20px;
-	transform: rotate(-7deg);
+	padding: 10px 20px;
+	font-weight: 500;
+	margin-bottom: 60px;
+	border-radius: 10px;
 	}
 }
 
 .separador{
-	background: $gris-oscuro;
+	background: $amarillo;
 	box-sizing: border-box;
 	height: 3px;
 	width: 300px;
-	margin: auto;
 	}
 
 .formacion {
-	background: $gris-claro;
+	background: $negro;
 	.contenedor{
 	padding-top: 60px;
 	}
 	h2{
-	color: $gris-oscuro;
-	padding: 10px;
-	text-align: center;
-	font-family: $titulo, cursive;
-	letter-spacing: 2px;
-	font-size: 40px;
+	color: white;
+	padding: 10px 10px 0 0;
+	font-family: $texto2;
+	font-size: 30px;
 	/*border: 1px $gris-oscuro solid;*/
     margin-bottom: 10px;
+    font-weight: 700;
 	}
-	
+	p{
+	color: white;
+	font-family: $texto;
+	font-weight: 300;
+	font-size: 14px;
+	padding: 10px 30px 0 0;
+	width: 50%;
+	line-height: 150%;
+
+	}
 	article{
 	@media (max-width: 720px){
 			width: 40%;
@@ -146,40 +159,73 @@ header{
 	padding: 100px 20px;
 	padding-top: 80px;
 	margin: auto;
-	color: $gris-oscuro;
+	color: white;
 	}
 	h3{
-	font-family: $titulo, sans-serif;
-	margin: 10px 0;
+	font-family: $texto2;
+	color: $amarillo;
+	margin: 20px 0 0 0;
 	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
 
 	}
 	h4{
-	font-family: $texto, sans-serif;
+	font-family: $texto;
 	margin: 5px 0;
 	font-weight: 300;
+	text-align: center;
+	}
+	.boton{
+	font-family: $texto;
+	color: $amarillo;
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid $amarillo;
+	margin: 15px 0;
+	text-decoration: none;
 	}
 }
 
+.thumbnail{
+	background: black;
+	border-color: $amarillo;
+	margin: 30px 0;
+	padding-top: 20px;
+	p{
+	 width: 90%;
+	}
+}
+
+.btn-primary{
+	background: $amarillo;
+	color: black;
+	border-color: yellow;
+}
+
 .habilidades{
-	background-image: url("../img/habilidades.jpg");
+	background: $amarillo;
+	/*background-image: url("../img/habilidades.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
 	.contenedor{
 	padding-top: 60px;
 	}
 	h3{
-	background: white;
-	font-family: $titulo, cursive;
-	color: $gris-oscuro;
-	letter-spacing: 2px;
-	font-size: 40px;
-	text-align: center;
-	padding: 10px;
+	background: $amarillo;
+	font-family: $texto2;
+	color: $negro;
+	font-size: 30px;
+	text-align: right;
+	padding: 10px 0;
 	/*border: 1px $gris-oscuro solid;*/
     margin-bottom: 10px;
+    font-weight: 700;
+	}
+	.separador{
+	margin: 0 0 auto 0;
 	}
 	ul{
 	width: 500px;
@@ -194,8 +240,8 @@ header{
 			padding: 6px;
 			font-size: 30px;
 		}
-	background: white;
-	color: $gris-claro;
+	background: $amarillo;
+	color: $gris-oscuro;
 	font-family: $texto, sans-serif;
 	font-weight: 700;
 	display: inline-block;
@@ -209,28 +255,26 @@ header{
 			transform: rotate(0);
 			transform: scale(0);
 		}
-		color: $gris-oscuro;
+		color: black;
 		transform: rotate(7deg);
 		transform: scale(3);
+		border: 1px solid $negro;
 	}
 }
 
 
 
 .trabajos { 
-	background: $gris-claro;
+	background: $negro;
 	.contenedor{
 	padding-top: 60px;
 	}
 	h3{
-	color: $gris-oscuro;
-	letter-spacing: 2px;
-	padding: 10px;
-	text-align: center;
-	font-family: $titulo, sans-serif;
-	font-size: 40px;
-    margin-bottom: 10px;
-    font-weight: 600;
+	color: white;
+	padding: 10px 0;
+	font-family: $texto2;
+	font-size: 30px;
+    font-weight: 700;
 	}
     .galerias{
     display: flex;
@@ -239,17 +283,22 @@ header{
 	justify-content: space-between;
 	padding: 30px 0;
 	}
-	article{
-	padding: 20px;
-	text-align: center;
-	color: $gris-oscuro;
-	font-family: $texto;
-	}
+	article {
+    padding: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    border: 1px solid #FFEB3B;
+    margin-bottom: 30px;
+    border-radius: 14px;
+    }
 	h4{
 	padding: 15px 0;
     font-weight: 700;
     width: 200px;
     font-size: 19px;
+    color: $amarillo;
 	}
 	.gallery{
 	 position: relative;
@@ -289,14 +338,14 @@ header{
 
 
 footer{
-	background-color: $gris-oscuro;
+	background-color: $amarillo;
 	.redes{
 	margin: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 30px;
-	color: $texto-1;
+	color: $negro;
 	width: 100%;
 	font-family: "lato", sans-serif;
 	font-size: 25px;
@@ -335,7 +384,7 @@ footer{
 	font-family: $texto, sans-serif;
 	}
 	.fondo{
-	background: black;
+	background: $negro;
 	width: 100%;
 	font-family: $texto, sans-serif;
 	font-size: 12px;
